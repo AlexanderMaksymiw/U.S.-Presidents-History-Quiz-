@@ -1,0 +1,114 @@
+/* Reset and center the body */
+html,
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: first baseline; /* horizontal center */
+  align-items: center; /* vertical center */
+  background-color: #e0f7fa; /* optional light background for contrast */
+  font-family: "Lato", sans-serif;
+  flex-direction: column;
+}
+
+.heading {
+  max-width: 700px;
+}
+
+#title {
+  font-weight: bold;
+  font-family: "outfit";
+}
+
+#intro {
+  font-family: "outfit";
+}
+
+
+.questionContainer {
+  font-family: "Merriweather";
+  background-color: hsl(197, 90%, 38%);
+  color: aliceblue;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 90%; /* responsive for smaller screens */
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* subtle shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center content inside card */
+  gap: 20px; /* spacing between elements */
+}
+
+
+.questionContainer img {
+  width: 100%;
+  max-height: 500px; /* limits height */
+  object-fit: cover; /* keeps image proportion without stretching */
+  border-radius: 8px;
+}
+
+
+#question {
+  font-size: 1.2rem;
+  text-align: left; /* center the question text */
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+
+.answersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* space between each radio option */
+  width: 100%;
+}
+
+/* Hide default radio circles and style labels as buttons */
+.answers {
+  display: none; /* hide default radio input */
+}
+
+.answers + label {
+  display: block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: "outfit";
+  text-align: left;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Highlight selected option */
+.answers:checked + label {
+  background-color: white;
+  color: hsl(197, 90%, 38%);
+  border-color: white;
+}
+
+#submitContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+button {
+  background-color: hsl(197, 90%, 38%);
+  width: fit-content;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  margin-top: 34px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+  background-color: white;
+  color: hsl(197, 90%, 38%);
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Text:wght@200..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="heading">
+      <h1 id="title">Quiz: U.S. Presidents</h1>
+      <p id="intro">
+        Test your knowledge of the men who have led the United States through
+        triumphs and trials! This quiz will take you on a journey through the
+        lives, legacies, and little-known facts about U.S. Presidents.
+      </p>
+    </div>
+    <section class="questionContainer">
+      <img
+        id="questionImage"
+        src="images/ww2 america.jpg"
+        alt="american soldiers of WW2"
+      />
+      <form>
+        <h2 id="question">
+          During World War II, one President served longer than any other in
+          U.S. history, guiding the nation through both the Great Depression and
+          most of the war before passing away in office in 1945. Who was he?
+        </h2>
+        <div class="answersContainer">
+          <div>
+            <input id="a" class="answers" type="radio" name="answer" />
+            <label for="a">Franklin D. Roosevelt</label>
+          </div>
+          <div>
+            <input id="b" class="answers" type="radio" name="answer" />
+            <label for="b">Dwight D. Eisenhower</label>
+          </div>
+          <div>
+            <input id="c" class="answers" type="radio" name="answer" />
+            <label for="c">Harry S. Truman</label>
+          </div>
+          <div>
+            <input id="d" class="answers" type="radio" name="answer" />
+            <label for="d">Woodrow Wilson</label>
+          </div>
+        </div>
+        <div id="submitContainer">
+          <button type="button" onclick="submitAnswer()">Submit Answer</button>
+        </div>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
