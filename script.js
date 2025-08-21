@@ -88,6 +88,9 @@ const answerLabels = {
   d: document.querySelector('label[for="d"]'),
 };
 
+const questionFact = document.getElementById("factText");
+const resultText = document.getElementById("resultText");
+
 let currentQuestionIndex = 0; // this simply tracks the index of each question, and acts as the mechanism to distinguish each question.
 
 //all elements have been linked so its time to create the logic to load the question.
@@ -97,6 +100,7 @@ function loadQuestion(index) {
   const q = quizData[index]; // making the quizData index a variable.
   questionElement.textContent = q.question; // take that html h2 tag named question and make its textContent equal quizData[0] question property.
   questionImage.src = q.image; // take the image html tag src and make it equal to quizData[0] image property.
+  questionFact.textContent = q.fact;
 
   for (let key in q.answers) {
     //for in loop required for the answers object, key takes the value of the current property name (a,b,c,d).
@@ -104,6 +108,7 @@ function loadQuestion(index) {
     answerLabels[key].textContent = q.answers[key]; // take the label html element for answers and update the text to the value of each property.
   }
 }
+
 // utility function to get the user's selected answer
 function getSelectedAnswer() {
   const selected = document.querySelector('input[name="answer"]:checked'); // querySelector used to save the answer(input) if its checked.
@@ -112,6 +117,7 @@ function getSelectedAnswer() {
 //function to submit the selected answer
 function submitAnswer() {
   const answer = getSelectedAnswer(); //new variable answer is the return from the getSelectedAnswer function.
+
   if (!answer) {
     //if there is no answer then return the alert and exit out of the function.
     alert("Please select an answer...");
@@ -121,17 +127,23 @@ function submitAnswer() {
   const correct = quizData[currentQuestionIndex].correct; //set correct variable to the "correct" property from the current question using quizData and the CQI
   if (answer === correct) {
     // if statement to handle logic for correct or incorrect answer.
-    alert("Correct! You got it right!");
+    resultText.textContent = "Correct!";
     score++; // update the score variable with an increment.
   } else {
-    alert(
-      `Wrong! Correct answer ${quizData[currentQuestionIndex].answers[correct]}`
-    ); // if incorrect use a template literal to display the correct answer in the string.
+    resultText.textContent = `Wrong! Correct answer: ${quizData[currentQuestionIndex].answers[correct]}`;
   }
+  document.querySelector(".peripherals").style.display = "flex";
+  document.querySelector(".factContainer").style.display = "block";
+}
+
+function onNextQuestion() {
   currentQuestionIndex++; //now its safe to move to the next question, increment 1 on CQI.
   if (currentQuestionIndex < quizData.length) {
     //does a check to see if CQI is less than the quizData length
     loadQuestion(currentQuestionIndex); //then loads the next question
+
+    document.querySelector(".peripherals").style.display = "none";
+    document.querySelector(".factContainer").style.display = "none";
   } else {
     // if the CQI failed the if statement and was a higher value than the quizData length then end the quiz.
     alert(`Quiz Finished! Your score: ${score} / ${quizData.length}`); // use template literal to display score out of quizData length.
