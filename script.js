@@ -130,7 +130,7 @@ function submitAnswer() {
     resultText.textContent = "Correct!";
     score++; // update the score variable with an increment.
   } else {
-    resultText.textContent = `Wrong! Correct answer: ${quizData[currentQuestionIndex].answers[correct]}`;
+    resultText.textContent = `Answer: ${quizData[currentQuestionIndex].answers[correct]}`;
   }
   document.querySelector(".peripherals").style.display = "flex";
   document.querySelector(".factContainer").style.display = "block";
