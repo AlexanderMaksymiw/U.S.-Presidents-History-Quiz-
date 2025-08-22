@@ -66,6 +66,69 @@ const quizData = [
     correct: "d",
     fact: "journalist Anne Royall, considered one of the first female reporters in America, supposedly sat on his clothes while he swam so she could demand an interview, and he had no choice but to agree!",
   },
+  {
+    question:
+      "By which of these nicknames is U.S. President Zachary Taylor known?",
+    image: "images/zachary-taylor.jpg",
+    answers: {
+      a: "Old Rough and Ready",
+      b: "Old Buck",
+      c: "Old Hickory",
+      d: "The Great Emancipator",
+    },
+    correct: "a",
+    fact: "Zachary Taylor (1784-1850) was an American military officer who served as the twelfth president of the United States. By the Mexican-American War, Taylor became a national hero for victories at Palo Alto, Resaca de la Palma, and Buena Vista, with newspapers and politicians praising his rugged bravery and action-oriented leadership.",
+  },
+  {
+    question:
+      "Which first and only U.S. President could speak eight foreign languages either partially or fluently?",
+    image: "images/languages.jpg",
+    answers: {
+      a: "Zachary Taylor",
+      b: "James Madison",
+      c: "Andrew Jackson",
+      d: "John Quincy Adams",
+    },
+    correct: "d",
+    fact: "John Quincy Adams was a remarkable linguist, fluent in English, his native language, as well as French, German, Italian, and Spanish, which he learned and used extensively during his diplomatic service in Europe and Latin America. In addition, he was well-versed in Latin and Greek through his classical education, and he also knew Dutch from early exposure in New England and European contacts.",
+  },
+  {
+    question: "Who was president during the Cuban Missile Crisis?",
+    image: "images/P-2h_Neptune.jpg",
+    answers: {
+      a: "Richard Nixon",
+      b: "John F. Kennedy",
+      c: "Lyndon B. Johnson",
+      d: "Dwight D. Eisenhower",
+    },
+    correct: "b",
+    fact: "Intense negotiations took place between Kennedy and Soviet Premier Nikita Khrushchev. After days of careful diplomacy, the Soviets agreed to remove the missiles from Cuba. In return, the United States publicly pledged not to invade Cuba and secretly agreed to remove U.S. missiles from Turkey.",
+  },
+  {
+    question: "Who was president during World War I?",
+    image: "images/ww1.webp",
+    answers: {
+      a: "Warren G. Harding",
+      b: "Calvin Coolidge",
+      c: "Woodrow Wilson",
+      d: "William Howard Taft",
+    },
+    correct: "c",
+    fact: "The U.S. entered World War I in 1917 due to Germany’s unrestricted submarine warfare, the Zimmermann Telegram proposing a German-Mexican alliance, economic ties to the Allies, and President Wilson’s goal to “make the world safe for democracy,” leading Congress to declare war on April 6, 1917.",
+  },
+  {
+    question:
+      "Which president had a pet raccoon named Rebecca at the White House?",
+    image: "images/raccoon",
+    answers: {
+      a: "Calvin Coolidge",
+      b: "Herbert Hoover",
+      c: "Harry S. Truman",
+      d: "Theodore Roosevelt",
+    },
+    correct: "a",
+    fact: "Calvin Coolidge, the 30th president (1923–1929), was known for having a rather unconventional collection of pets at the White House, which included dogs, cats, birds, and even a wallaby. Originally, Rebecca was intended to be cooked and served as part of the Thanksgiving feast, a common practice at the time in some regions—but the Coolidges decided instead to keep her as a pet.",
+  },
 ];
 
 // before the logic can be created for the quiz, I must link html elements to my script. Then I can use them like building blocks.
