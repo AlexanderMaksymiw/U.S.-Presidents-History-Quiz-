@@ -155,6 +155,9 @@ const answerLabels = {
 
 const questionFact = document.getElementById("factText");
 const resultText = document.getElementById("resultText");
+const quizEnd = document.querySelector(".quizEnd");
+const finalScore = document.getElementById("finalScore");
+const endImage = document.getElementById("end");
 
 let currentQuestionIndex = 0; // this simply tracks the index of each question, and acts as the mechanism to distinguish each question.
 
@@ -201,6 +204,13 @@ function submitAnswer() {
   document.querySelector(".factContainer").style.display = "block";
 }
 
+function endQuiz() {
+  document.querySelector(".quizEnd").style.display = "flex";
+  document.querySelector(".questionContainer").style.display = "none";
+  finalScore.textContent = `You scored: ${score} / ${quizData.length}`;
+  endImage.setAttribute("src", "images/dog.gif");
+}
+
 function onNextQuestion() {
   currentQuestionIndex++; //now its safe to move to the next question, increment 1 on CQI.
   if (currentQuestionIndex < quizData.length) {
@@ -210,7 +220,6 @@ function onNextQuestion() {
     document.querySelector(".peripherals").style.display = "none";
     document.querySelector(".factContainer").style.display = "none";
   } else {
-    // if the CQI failed the if statement and was a higher value than the quizData length then end the quiz.
-    alert(`Quiz Finished! Your score: ${score} / ${quizData.length}`); // use template literal to display score out of quizData length.
+    endQuiz();
   }
 }

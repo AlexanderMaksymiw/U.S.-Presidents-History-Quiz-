@@ -39,6 +39,33 @@ body {
   line-height: 1.2;
 }
 
+.quizEnd {
+  display: none;
+  flex-direction: column;
+  width: 90%;
+  max-width: 700px;
+  border: solid;
+  border-radius: 12px;
+  padding: 30px;
+  color: aliceblue;
+  background-color: hsl(197, 90%, 38%);
+}
+
+.quizEnd img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+#endText {
+  font-size: 2rem;
+}
+
+#finalScore {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Outfit";
+}
+
 .heading {
   width: 90%;
   max-width: 700px;
