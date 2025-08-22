@@ -93,7 +93,8 @@ const quizData = [
     fact: "John Quincy Adams was a remarkable linguist, fluent in English, his native language, as well as French, German, Italian, and Spanish, which he learned and used extensively during his diplomatic service in Europe and Latin America. In addition, he was well-versed in Latin and Greek through his classical education, and he also knew Dutch from early exposure in New England and European contacts.",
   },
   {
-    question: "Who was president during the Cuban Missile Crisis?",
+    question:
+      "The Cuban Missile Crisis of 1962 is considered the height of the Cold War where nuclear war seemed to be a hair breadth away. But Who was president during the Cuban Missile Crisis?",
     image: "images/P-2h_Neptune.jpg",
     answers: {
       a: "Richard Nixon",
@@ -105,7 +106,8 @@ const quizData = [
     fact: "Intense negotiations took place between Kennedy and Soviet Premier Nikita Khrushchev. After days of careful diplomacy, the Soviets agreed to remove the missiles from Cuba. In return, the United States publicly pledged not to invade Cuba and secretly agreed to remove U.S. missiles from Turkey.",
   },
   {
-    question: "Who was president during World War I?",
+    question:
+      "World War 1 began in July 1914 but it wouldn't be until 1917 that America would join the war. Who was president during World War I?",
     image: "images/ww1.webp",
     answers: {
       a: "Warren G. Harding",
@@ -118,8 +120,8 @@ const quizData = [
   },
   {
     question:
-      "Which president had a pet raccoon named Rebecca at the White House?",
-    image: "images/raccoon",
+      "There have been many odd pets that have shared the White House with presidents, even an Alligator! But which president had a pet raccoon named Rebecca at the White House?",
+    image: "images/raccoon.jpg",
     answers: {
       a: "Calvin Coolidge",
       b: "Herbert Hoover",
