@@ -120,7 +120,7 @@ function submitAnswer() {
 
   if (!answer) {
     //if there is no answer then return the alert and exit out of the function.
-    alert("Please select an answer...");
+    alert("Select an answer...");
     return;
   }
 
