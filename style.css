@@ -4,7 +4,7 @@ body {
   margin: 0;
   height: auto;
   display: flex;
-  justify-content: first baseline; /* horizontal center */
+  justify-content: flex-start;
   align-items: center; /* vertical center */
   background-color: #e0f7fa; /* optional light background for contrast */
   font-family: "Lato", sans-serif;
@@ -40,6 +40,7 @@ body {
 }
 
 .heading {
+  width: 90%;
   max-width: 700px;
 }
 
