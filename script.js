@@ -160,6 +160,7 @@ const finalScore = document.getElementById("finalScore");
 const endImage = document.getElementById("end");
 
 let currentQuestionIndex = 0; // this simply tracks the index of each question, and acts as the mechanism to distinguish each question.
+let answerSubmitted = false; // boolean to flag whether an answer has been submitted.
 
 //all elements have been linked so its time to create the logic to load the question.
 
@@ -184,6 +185,7 @@ function getSelectedAnswer() {
 }
 //function to submit the selected answer
 function submitAnswer() {
+  if (answerSubmitted) return; // stops the user from submitting an answer multilple times and incrementing score.
   const answer = getSelectedAnswer(); //new variable answer is the return from the getSelectedAnswer function.
 
   if (!answer) {
@@ -200,6 +202,7 @@ function submitAnswer() {
   } else {
     resultText.textContent = `Answer: ${quizData[currentQuestionIndex].answers[correct]}`;
   }
+  answerSubmitted = true; // stops the user from submitting an answer multilple times and incrementing score.
   document.querySelector(".peripherals").style.display = "flex";
   document.querySelector(".factContainer").style.display = "block";
 }
@@ -216,6 +219,7 @@ function onNextQuestion() {
   if (currentQuestionIndex < quizData.length) {
     //does a check to see if CQI is less than the quizData length
     loadQuestion(currentQuestionIndex); //then loads the next question
+    answerSubmitted = false; // resets answerSubmitted boolean logic for next question.
 
     document.querySelector(".peripherals").style.display = "none";
     document.querySelector(".factContainer").style.display = "none";
